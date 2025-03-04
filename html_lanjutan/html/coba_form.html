@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="img/png" href="/html_lanjutan/gambar/icon.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h3>Form dengan Method GET</h3>
+    <form action="/action_page.php" method="get" target="_self">
+        <label for="depan">Nama depan : </label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        
+        <label for="n_belakang">Nama belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+        
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    
+    <p>Jika Anda mengeklik tombol "Kirim", data formulir akan dikirim ke halaman "/action_page.php".</p>
+    
+    <h3>Form dengan Method POST</h3>
+    <form action="/action_page.php" method="post" target="_blank">
+        <label for="depan2">Nama depan : </label><br>
+        <input type="text" id="depan2" name="i_name" value="Andi"><br>
+        
+        <label for="n_belakang2">Nama belakang:</label><br>
+        <input type="text" id="n_belakang2" name="i_belakang" value="Saputra"><br><br>
+        
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    
+    <p>Jika Anda mengeklik tombol "Kirim" pada form ini, data dikirim menggunakan metode POST dan ditampilkan di tab baru.</p>
+    <hr>
+    <p>
+        <h2>Kesimpulan</h2>
+        <p>Pada uji coba pertama, ketika tombol "Reset" ditekan, semua input dalam formulir dikembalikan ke nilai default yang telah ditentukan sebelumnya. Sementara itu, ketika tombol "Kirim" ditekan dengan **method="GET"**, data formulir dikirim melalui URL dan dapat dilihat langsung di address bar. Hal ini menunjukkan bahwa metode GET tidak disarankan untuk data yang bersifat sensitif.</p>
+        <p>Ketika method diubah menjadi **POST**, data dikirim tanpa terlihat di URL, sehingga lebih aman untuk data penting. Pada uji coba atribut **target**, jika nilai `_self` digunakan, halaman saat ini akan diperbarui dengan hasil pengiriman formulir. Namun, jika `_blank` digunakan, hasil pengiriman formulir akan dibuka di tab baru. Hal ini bermanfaat jika ingin menampilkan data tanpa menutup halaman utama.</p>
+        <p>Secara keseluruhan, uji coba ini menunjukkan bahwa pemilihan metode (`GET` atau `POST`) serta atribut **target** mempengaruhi bagaimana data formulir dikirim dan ditampilkan. Pemahaman ini penting dalam mengembangkan aplikasi berbasis web yang aman dan sesuai dengan kebutuhan pengguna.</p>
+    </p>
+</body>
+</html>
