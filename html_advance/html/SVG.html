@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Fachrozzi Rizky Wibowo">
+    <meta name="nim" content="244311041">
+    <title>Halaman Beranda</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer{
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>SVG</h1>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+            </svg>
+            <svg width="100" height="100">
+                <rect width="400" height="100"
+                  style="fill: rgb(0, 0, 255); stroke-width: 10; stroke: rgb(0, 0, 0)"
+                />
+              </svg>
+              <svg width="400" height="180">
+                <rect x="50" y="20" rx="20" ry="20" width="150" height="150"style="fill: red; stroke-width: 5; stroke: black; opacity: 0.5"/>
+              </svg>
+            <svg width="200" height="200">
+                <polygon
+                  points="80,1, 20,130 50,140 120,120"
+                  style="fill: lime; stroke: purple; stroke-width: 2"
+                />
+              </svg>
+      
+            <p>Kode HTML ini menampilkan sebuah artikel berjudul "SVG", yang berisi empat elemen SVG dengan berbagai bentuk dan gaya. Elemen pertama adalah lingkaran kuning dengan garis tepi hijau, sementara elemen kedua merupakan persegi panjang biru dengan garis tepi hitam. Elemen ketiga menampilkan persegi panjang merah dengan sudut membulat dan opacity 0.5. Elemen terakhir adalah poligon hijau dengan garis tepi ungu. Kode ini menunjukkan bagaimana SVG dapat digunakan untuk membuat berbagai bentuk geometris dengan warna dan gaya yang berbeda.</p>
+        </article>
+    </section>
+    <footer>
+        <p><i>copyright@FachrozziRizkyWibowo_24431104</i></p>
+    </footer>
+</body>
+</html>
