@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>waktu saat ini =</p>
+  <p id="waktu"></p>
+  <script>
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById("waktu").innerHTML = now.toLocaleString();
+    }, 1000);
+  </script>
+</body>
+</html>

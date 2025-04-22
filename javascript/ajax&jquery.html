@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button id="tombol">Klik Saya!</button>
+  <div id="pesan"></div>
+
+  <script>
+    $(document).ready(function(){
+      $("#tombol").click(function(){
+        $("#pesan").html("Halo, ini pesan dari jQuery!");
+      });
+    });
+  </script>
+    <p>Pengertian: AJAX adalah teknik dalam pengembangan web yang memungkinkan halaman web untuk berkomunikasi dengan server secara asynchronous (tanpa perlu me-reload halaman). Meskipun namanya menyebut XML, saat ini AJAX lebih sering digunakan dengan format JSON.</p>
+    <p>Pengertian: jQuery adalah library JavaScript yang dirancang untuk menyederhanakan manipulasi HTML DOM, event handling, animasi, dan terutama AJAX.</p>
+</body>
+</html>

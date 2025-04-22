@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Menu dengan jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    ul.menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 200px;
+      background-color: #333;
+    }
+
+    ul.menu > li {
+      position: relative;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    ul.menu > li:hover {
+      background-color: #444;
+    }
+
+    ul.submenu {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding-left: 20px;
+      background-color: #555;
+    }
+
+    ul.submenu li {
+      padding: 8px;
+      color: #fff;
+    }
+
+    ul.submenu li:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="menu">
+    <li>
+      Home
+    </li>
+    <li>
+      Produk
+      <ul class="submenu">
+        <li>Elektronik</li>
+        <li>Baju</li>
+        <li>Buku</li>
+      </ul>
+    </li>
+    <li>
+      Tentang Kami
+    </li>
+  </ul>
+
+  <script>
+    // jQuery untuk menampilkan atau menyembunyikan submenu
+    $(document).ready(function() {
+      $(".menu li").click(function(event) {
+        // Menghindari klik menyebar ke parent
+        event.stopPropagation();
+
+        // Sembunyikan submenu lain
+        $(".submenu").not($(this).children(".submenu")).slideUp();
+
+        // Toggle submenu yang diklik
+        $(this).children(".submenu").slideToggle();
+      });
+    });
+  </script>
+
+</body>
+</html>

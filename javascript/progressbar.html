@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Download Dialog dengan Progress Bar</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #mulaiDownload {
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #mulaiDownload:hover {
+      background-color: #1e8449;
+    }
+
+    #progressbar {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="mulaiDownload">Mulai Download</button>
+
+
+  <div id="dialog" title="Sedang Mengunduh..." style="display:none;">
+    <p>Harap tunggu, file sedang diunduh...</p>
+    <div id="progressbar"></div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+
+      $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: false,
+        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); } // 
+      });
+
+      $("#progressbar").progressbar({
+        value: false 
+      });
+
+      $("#mulaiDownload").click(function(){
+
+        var progressVal = 0;
+        $("#progressbar").progressbar("option", "value", progressVal);
+        $("#dialog").dialog("open");
+
+        var interval = setInterval(function(){
+          progressVal += 5;
+          $("#progressbar").progressbar("option", "value", progressVal);
+
+          if (progressVal >= 100) {
+            clearInterval(interval);
+            $("#dialog").dialog("option", "title", "Download Selesai");
+            $("#dialog").html("<p>Download selesai!</p>");
+            setTimeout(function(){
+              $("#dialog").dialog("close");
+              $("#dialog").dialog("option", "title", "Sedang Mengunduh...");
+              $("#dialog").html('<p>Harap tunggu, file sedang diunduh...</p><div id="progressbar"></div>');
+              $("#progressbar").progressbar({ value: false });
+            }, 2000);
+          }
+        }, 50); 
+      });
+
+    });
+  </script>
+
+</body>
+</html>
