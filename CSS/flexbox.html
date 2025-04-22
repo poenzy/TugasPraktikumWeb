@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejalajar Flex Box</title>
+    <style>
+        .wadah_flex{
+            display: flex;
+            background: gainsboro;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        .wadah_flex > div{
+            background-color: aqua;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>    
+    </div>
+    <p>Kesimpulan Skenario 1 adalah : tulisan menjadi satu baris dan memiliki background berwarna gainsboro</p>
+    <p>Kesimpulan Skenario 2 adalah : pada tulisan 1,2,3 memiliki background berwarna aqua dan memiliki margin 10px dan padding 30px serta memiliki font size 30px.</p>
+    <p>Kesimpulan Skenario 3 adalah : pada sekenario ini tulisan 1 sampai 12 memiliki flexsibel tempat dan tidak ada margin dan padding.</p>
+    <p>Kesimpulan Skenario 4 adalah : pada sekenario ini tulisan 1 sampai 12 memiliki tempat dengan pengaturan padding yang telah ada</p>
+    <p>Kesimpulan Skenario 5 adalah : pada sekenario ini merupakan gabungan flex direction dan wrap </p>
+    <p>Kesimpulan Skenario 6 adalah : pada sekenario ini merupakan pengatur contet yang berada di dalam div </p>
+</body>
+</html>

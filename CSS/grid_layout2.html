@@ -1,0 +1,58 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>Grid Layout 2</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 10px 500px 20px 10px;
+        grid-gap: 50px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+  
+      .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+      }
+  
+      .item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    Kode untuk body :
+    <div class="grid-container">
+      <div class="item1">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+    <div>
+      Kesimpulan skenario 1: grid-column-start dan grid-column-end menentukan bahwa elemen tersebut akan dimulai dari kolom
+      pertama dan berakhir di kolom ketiga dalam grid.
+    </div>
+    <div>
+      Kesimpulan skenario 2:
+      <br />
+      - auto auto auto auto: Grid akan memiliki empat kolom.
+      <br />
+      - auto auto: Grid hanya memiliki dua kolom, sehingga elemen-elemen akan
+      dipindahkan ke baris berikutnya
+      <br />
+      - 70px 300px auto 40px: Kolom pertama memiliki lebar 70px, kolom kedua
+      300px, kolom ketiga menyesuaikan konten, dan kolom keempat 40px. <br />
+      - 10px 500px 20px 10px: Grid memiliki empat kolom dengan ukuran tetap sesuai
+      yang dicantumkan.
+    </div>
+  </body>
